@@ -10,10 +10,10 @@ Very simple WebClient wrapper that is able to do multi-threaded segmented downlo
 How to use
 -----------
 
-'''csharp
+```
 using (var client = new AcceleratedWebClient()) {
 	client.DownloadFileCompleted += file_Completed /* your handler (after file was downloaded) */ ;
 	client.DownloadProgressChanged += file_ProgressChanged /* your handler (to show download progress) */ 
 	client.DownloadFileAsync(new Uri(uriToDownload), fileToSave, 5 /* number of segments (threads) */);
 }
-'''
+```
