@@ -22,7 +22,7 @@ namespace NAccelerate
             using (WebResponse resp = req.GetResponse())
             {
                 int contentLength;
-                if (resp.Headers["Accept-Range"] != "bytes")
+                if (resp.Headers["Accept-Ranges"] != "bytes")
                     return null;
                 if (int.TryParse(resp.Headers.Get("Content-Length"), out contentLength))
                     return contentLength;
